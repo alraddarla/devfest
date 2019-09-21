@@ -1,0 +1,65 @@
+package catfacts
+
+// Cat facts were gathered from the following sites:
+// http://mentalfloss.com/article/578211/cat-facts
+// https://coleandmarmalade.com/2018/12/31/25-interesting-facts-about-cats-you-may-not-have-known/
+// https://www.buzzfeed.com/chelseamarshall/meows
+// https://www.purina.com/articles/cat/facts/10-fascinating-facts-about-cats
+
+var RandomFifty = [...]int64{14, 13, 1, 47, 15, 3, 16, 27, 37, 44, 49, 45, 25, 18, 4, 11,
+	5, 6, 39, 30, 36, 22, 50, 46, 10, 8, 41, 26, 48, 35, 33, 43,
+	38, 29, 20, 31, 12, 42, 19, 9, 24, 2, 23, 17, 21, 28, 34, 32, 40, 7,
+}
+
+var AllTheFacts = [...]string{
+	"Cats spend around 30 to 50 percent of their day grooming themselves",
+	"Just because a cat is purring doesn't mean the cat is happy. Cats often make the sound when they're content, but they also purr when they're sick, stressed, hurt, or giving birth",
+	"Scientists don't quite know why cats purr, but one hypothesis is that the sound frequency of purring, between 25 and 150 Hertz, can improve bone density and promote healing",
+	"More than half of the world's felines don't respond to catnip",
+	"Chances are, your cat hates your music",
+	"Mary Todd Lincoln was once asked if her husband had any hobbies. Her response? 'Cats!' ",
+	"A kindle isn't just an e-reader, it's also a word that's used to describe a group of kittens born to one mama cat",
+	"A group of full-grown cats is called a clowder",
+	"Looking to elevate your vocabulary? Try using the word ailurophile in a casual conversation. It's a fancy word for cat love",
+	"Contrary to popular belief, cats don't always land on their feet when they fall",
+	"On October 18, 1963, French scientists used a rocket to launch the first cat into space. The feline's name was Felicette, and she made it safely to the ground following a parachute descent",
+	"Even if you're not allergic to cats, your cat might be allergic to you. One in 200 cats are believed to have asthma, and this number continues to rise among indoor kitties as they're more frequently exposed to cigarette smoke, dust, human dandruff, and pollen",
+	"The average running feline can clock around 30 mph",
+	"Black cats are considered to be a bad omen in the U.S., but in Great Britain and Japan, they're perceived as favorable",
+	"Sphinx cats don't have fur coats, but their body temperature is still four degrees warmer than a typical feline",
+	"Some Maine Coon cats are born with six toes.",
+	"Cats are genetically predisposed to not be able to taste sweets",
+	"A cat has 244 bones in its entire body",
+	"Cats sweat through their paws",
+	"According to one estimate, a cat spends nearly two-thirds of its life asleep",
+	"Approximately 200 feral cats roam the grounds of Disneyland, where they help control the amusement park's rodent population. They're all spayed or neutered, and park staffers provide them with medical care and extra food",
+	"A cat can jump up to five times its height, or six times its length",
+	"Cats only use their meows to talk to humans, not each other",
+	"Despite imagery of cats happily drinking milk from saucers, studies indicate that cats are actually lactose intolerant and should avoid it entirely",
+	"The Cat Fanciers Association (CFA) recognizes 44 breeds of cats",
+	"A cat's cerebral cortex contains about twice as many neurons as that of dogs",
+	"A cat's smell is their strongest sense, and they rely on this leading sense to identify people and objects; a feline's sense of smell is 14x better than a human's",
+	"A cat has the ability to rotate their ears 180 degrees with the help of 32 muscles that they use to control them",
+	"A cat's nose is as unique as a human's fingerprint",
+	"Cats have 3 eyelids",
+	"Your cat's heart beats at a rate almost double that of yours, from 110-140 beats per minute",
+	"Owning a cat is actually proven to be beneficial for your health",
+	"Unlike humans, cats are usually lefties. Studies indicate that their left paw is typically their dominant paw",
+	"There are over 500 million domestic cats in the world",
+	"Cats can be lethal hunters and very sneaky, when they walk their back paws step almost exactly in the same place as the front paws did beforehand, this keeps noise to a minimum and limits visible tracks",
+	"Cats have powerful night vision, allowing them to see at light levels six times lower than what a human needs in order to see",
+	"Isaac Newton invented the cat door",
+	"House cats share 95.6% of their genetic makeup with tigers",
+	"The oldest cat in the world was 38 years old",
+	"A cat cannot see directly under its nose",
+	"Most cats have no eyelashes",
+	"Some believe that if you dream about a white cat, good luck will follow",
+	"Owning a cat can reduce the risk of stroke and heart attack by a third.",
+	"Your cat recognizes your voice but just acts too cool to care (probably because they are)",
+	"Cats make more than 100 different sounds whereas dogs make around 10",
+	"Cats use their whiskers to detect if they can fit through a space",
+	"A cat rubs against people to mark its territory",
+	"When your cat brings home a dead mouse or bird, it may do so to show you that you suck at hunting",
+	"Only 11.5% of people consider themselves cat people ",
+	"Most cats don't like water because their coats do not insulate them well enough",
+}

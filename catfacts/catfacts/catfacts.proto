@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package catfacts;
+
+service CatFacts {
+    rpc GetCatFact (CatFactRequest) returns (CatFactResponse) {}
+    rpc ListCatFacts (CatFactRequest) returns (stream CatFactResponse) {}
+    rpc StreamCatFacts (stream CatFactRequest) returns (stream CatFactResponse) {}
+}
+
+message CatFactRequest {
+    int64 id = 1;
+}
+
+message CatFactResponse {
+    string fact = 1;
+}
