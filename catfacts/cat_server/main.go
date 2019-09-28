@@ -43,7 +43,7 @@ func (s *catServer) StreamCatFacts(stream pb.CatFacts_StreamCatFactsServer) erro
 			return err
 		}
 
-		resp := &pb.CatFactResponse{Fact: pb.AllTheFacts[in.Id-1]}
+		resp := &pb.CatFactResponse{Fact: pb.AllTheFacts[in.Id-1], FactNum: in.Id}
 		if err := stream.Send(resp); err != nil {
 			return err
 		}
@@ -59,7 +59,7 @@ func newServer() *catServer {
 func (s *catServer) fillFacts() {
 	facts := make([]*pb.CatFactResponse, len(pb.AllTheFacts))
 	for i, fact := range pb.AllTheFacts {
-		facts[i] = &pb.CatFactResponse{Fact: fact}
+		facts[i] = &pb.CatFactResponse{Fact: fact, FactNum: int64(i+1)}
 	}
 	copy(s.savedFacts, facts)
 }

@@ -63,7 +63,7 @@ func streamFacts(ctx context.Context, client pb.CatFactsClient) {
 			if err != nil {
 				log.Fatalf("Failed to receive cat fact: %v", err)
 			}
-			log.Printf("Cat Fact: %s", in.Fact)
+			log.Printf("Cat Fact #%d: %s",in.FactNum, in.Fact)
 		}
 	}()
 
@@ -89,7 +89,7 @@ func listFacts(ctx context.Context, client pb.CatFactsClient, req *pb.CatFactReq
 		if err != nil {
 			log.Fatalf("%v.ListCatFacts(_) = _, %v", client, err)
 		}
-		log.Println(fact)
+		log.Printf("Fact #%d: %s\n", fact.FactNum, fact.Fact)
 	}
 }
 
